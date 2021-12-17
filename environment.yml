@@ -1,0 +1,21 @@
+name: calval_env
+channels:
+ - conda-forge
+ - anaconda
+ - defaults
+dependencies:
+ - python>=3.9
+ - jupyter
+ - papermill
+ - ipykernel
+ - rasterio
+ - shapely
+ - dateparser
+ - requests
+ - numpy
+ - matplotlib
+ - fiona
+ - geopandas
+ - boto3
+ - asf_search>=3.0.4
+ - tqdm
