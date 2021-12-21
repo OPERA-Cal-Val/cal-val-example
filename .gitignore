@@ -73,11 +73,7 @@ __pycache__/
 *.wgs84
 
 # Allow aois to be added
-!datasets/aois/aois.shp
-!datasets/aois/aois.shx
-!datasets/aois/aois.prj
-!datasets/aois/aois.dbf
-!datasets/aois/aois.cpg
+!datasets/aois/aois.geojson
 
 
 # Log files
