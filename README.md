@@ -40,7 +40,12 @@ Technically, the product data should be available from the OPERA Product API. Ho
 
 ## Steps
 
+*Important note*: if running this on a local workstation with non-enterprise connectivity, the notebooks download/upload time will be *slow* (e.g. files are upwards of 5 GB so in my home internet took about 1.2 hours). It is highly recommended to run these examples on a machine with high connectivity to ensure downloads/uploads are highly efficient.
+
 1. Create `datasets/aois` with `QGIS` and its vector drawing tools.
-2. Create an s3 bucket called `calval-metadata` in s3. Do not need to change any settings.
-3. Generate AWS credentials (credentials last for 24 hours) with these [instructions](https://github.jpl.nasa.gov/cloud/Access-Key-Generation/blob/master/python-README.md); this will require JPL VPN to access the repository and to generate the proper credentials. You will clone and presumably have most of the libraries (may have to install). I just ran `python aws-python.py` without changing the file permissions and that was fine. If you are apart of more than one AWS account, you will be prompted to select the proper role.
+2. Create an s3 bucket called `calval-metadata` in s3. Do not need to change any settings on bucket.
+3. Generate AWS credentials (credentials last for only a few hours) with these [instructions](https://github.jpl.nasa.gov/cloud/Access-Key-Generation/blob/master/python-README.md); this will require JPL VPN to access the repository and to generate the proper credentials. You will clone and presumably have most of the libraries (may have to install). I just ran `python aws-python.py` without changing the file permissions and that was fine. If you are apart of more than one AWS account, you will be prompted to select the proper role.
 4. Organize the landsat mosaics as [here](datasets/0_Organize_Hansen_Landsat_Mosaics.ipynb).
+5. Demonstrate downloading from Cal/Val database as [here](datasets/1_Download_Hansen_Validation_Dataset.ipynb).
+6. Create "training data" `geosjon` (similar 1.) using "land" and "water" labels in `QGIS`.
+7. Create Reference Map using (a) landsat mosaic, (b) training data, and (c) random Forest in this [notebook](datasets/2_RF_Classification_for_Reference_Map.ipynb).

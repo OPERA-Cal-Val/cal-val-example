@@ -74,6 +74,7 @@ __pycache__/
 
 # Allow aois to be added
 !datasets/aois.geojson
+!datasets/training_data.geojson
 
 
 # Log files
