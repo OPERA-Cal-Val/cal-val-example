@@ -19,3 +19,6 @@ dependencies:
  - boto3
  - asf_search>=3.0.4
  - tqdm
+ - pip
+ - pip:
+    - dem_stitcher

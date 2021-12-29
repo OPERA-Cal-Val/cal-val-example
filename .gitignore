@@ -90,3 +90,5 @@ __pycache__/
 *.ipynb
 !datasets/0_Organize_Hansen_Landsat_Mosaics.ipynb
 !datasets/1_Download_Hansen_Validation_Dataset.ipynb
+!datasets/2_Download_Hansen_Validation_Dataset.ipynb
+!datasets/3_RF_Classification_for_Reference_Map.ipynb
