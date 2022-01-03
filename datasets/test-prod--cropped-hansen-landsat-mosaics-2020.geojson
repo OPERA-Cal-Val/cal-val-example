@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "bucket": "test-prod--cropped-hansen-landsat-mosaics-2020", "key": "Hansen_GFC-2020-v1.8_last_30N_100W.tif", "source_url": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2020-v1.8/Hansen_GFC-2020-v1.8_last_30N_100W.tif", "year": 2020 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -91.678270890115002, 29.320518966016902 ], [ -91.060146510330611, 29.320518966016902 ], [ -91.060146510330611, 29.773092928202779 ], [ -91.678270890115002, 29.773092928202779 ], [ -91.678270890115002, 29.320518966016902 ] ] ] } },
+{ "type": "Feature", "properties": { "bucket": "test-prod--cropped-hansen-landsat-mosaics-2020", "key": "Hansen_GFC-2020-v1.8_last_40N_090W.tif", "source_url": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2020-v1.8/Hansen_GFC-2020-v1.8_last_40N_090W.tif", "year": 2020 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -88.21591391901751, 30.503890401521048 ], [ -87.749824102105791, 30.503890401521048 ], [ -87.749824102105791, 31.112926721242694 ], [ -88.21591391901751, 31.112926721242694 ], [ -88.21591391901751, 30.503890401521048 ] ] ] } }
+]
+}

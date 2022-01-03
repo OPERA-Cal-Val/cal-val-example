@@ -76,6 +76,7 @@ __pycache__/
 !datasets/aois.geojson
 !datasets/training_data.geojson
 !datasets/test-prod--hansen-landsat-mosaics-2020.geojson
+!datasets/test-prod--cropped-hansen-landsat-mosaics-2020.geojson
 
 # Log files
 *.log
