@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "source_url": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2020-v1.8/Hansen_GFC-2020-v1.8_last_30N_100W.tif", "year": 2020, "bucket": "test-prod--hansen-landsat-mosaics-2020", "key": "Hansen_GFC-2020-v1.8_last_30N_100W.tif" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -90.0, 20.0 ], [ -90.0, 30.0 ], [ -100.0, 30.0 ], [ -100.0, 20.0 ], [ -90.0, 20.0 ] ] ] } },
+{ "type": "Feature", "properties": { "source_url": "https://storage.googleapis.com/earthenginepartners-hansen/GFC-2020-v1.8/Hansen_GFC-2020-v1.8_last_40N_090W.tif", "year": 2020, "bucket": "test-prod--hansen-landsat-mosaics-2020", "key": "Hansen_GFC-2020-v1.8_last_40N_090W.tif" }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -80.0, 30.0 ], [ -80.0, 40.0 ], [ -90.0, 40.0 ], [ -90.0, 30.0 ], [ -80.0, 30.0 ] ] ] } }
+]
+}

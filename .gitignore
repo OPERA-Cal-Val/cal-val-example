@@ -75,7 +75,7 @@ __pycache__/
 # Allow aois to be added
 !datasets/aois.geojson
 !datasets/training_data.geojson
-
+!datasets/test-prod--hansen-landsat-mosaics-2020.geojson
 
 # Log files
 *.log

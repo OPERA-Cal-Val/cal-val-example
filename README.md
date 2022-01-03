@@ -40,12 +40,13 @@ Technically, the product data should be available from the OPERA Product API. Ho
 
 ## Steps
 
-*Important note*: if running this on a local workstation with non-enterprise connectivity, the notebooks download/upload time will be *slow* (e.g. files are upwards of 5 GB so in my home internet took about 1.2 hours). It is highly recommended to run these examples on a machine with high connectivity to ensure downloads/uploads are highly efficient.
+*Important note*: if running this on a local workstation with non-enterprise connectivity, the notebooks download/upload time will be *slow* (e.g. files in this example are upwards of 5 GB; on my home internet, uploading to an s3 bucket took about 1.25 hours). It is highly recommended to run these examples on a machine with high connectivity to ensure downloads/uploads are highly efficient.
 
-1. Create `datasets/aois` with `QGIS` and its vector drawing tools.
-2. Create an s3 bucket called `calval-metadata` in s3. Do not need to change any settings on bucket.
+1. Create `datasets/aois` with `QGIS` and its vector drawing tools to cover the areas above. See the resulting geojsons [here](datasets/aois.geojson).
+2. Create an s3 bucket called `calval-metadata` in s3. Do not modify any default settings during bucket creation (i.e. use default settings across the board).
 3. Generate AWS credentials (credentials last for only a few hours) with these [instructions](https://github.jpl.nasa.gov/cloud/Access-Key-Generation/blob/master/python-README.md); this will require JPL VPN to access the repository and to generate the proper credentials. You will clone and presumably have most of the libraries (may have to install). I just ran `python aws-python.py` without changing the file permissions and that was fine. If you are apart of more than one AWS account, you will be prompted to select the proper role.
 4. Organize the landsat mosaics as [here](datasets/0_Organize_Hansen_Landsat_Mosaics.ipynb).
-5. Demonstrate downloading from Cal/Val database as [here](datasets/1_Download_Hansen_Validation_Dataset.ipynb).
-6. Create "training data" `geosjon` (similar 1.) using "land" and "water" labels in `QGIS`.
-7. Create Reference Map using (a) landsat mosaic, (b) training data, and (c) random Forest in this [notebook](datasets/2_RF_Classification_for_Reference_Map.ipynb).
+5. We have to crop the mosaics to perform classification - they are distributed in squares with width 40,000 pixel. Lots of GIS and re-uploading is done in the subsequent [notebook](datasets/1_Crop_Mosaics_and_Re-upload.ipynb).
+6. We demonstrate downloading from Cal/Val database as [here](datasets/2_Download_Hansen_Validation_Dataset.ipynb). The data can then be viewed in QGIS, for example. Or just to double check the metadata or measurements are correct. Here is a metadata geojson [example](datasets/test-prod--hansen-landsat-mosaics-2020.geojson).
+7. Create "training data" `geosjon` (similar 1.) using "land" and "water" labels in `QGIS`. See the resulting example [here](datasets/training_data.geojson).
+8. Create Reference Map using (a) cropped landsat mosaic, (b) training data, and (c) random Forest in this [notebook](datasets/3_RF_Classification_for_Reference_Map.ipynb).
